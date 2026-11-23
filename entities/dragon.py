@@ -4,3 +4,4 @@ class Dragon:
         self.idade = idade
         self.capaz_voar = None
         self.tipo = None
+        self.id = None
