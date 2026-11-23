@@ -12,3 +12,13 @@ class DAO:
             print("Inserção realizada com sucesso.")
         except sqlite3.Error as erro:
             print("Erro ao realizar operação.")
+    
+    
+    def list(self):
+        try:
+            self.cursor.execute("SELECT * FROM dragons")
+            self.connection.commit()
+            print("Leitura realizada com sucesso.")
+            
+        except sqlite3.Error as erro:
+            print("Erro ao ler tabela.")
