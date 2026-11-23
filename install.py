@@ -1,5 +1,6 @@
 import sqlite3
 from database.connection import get_db_connection
+from database.dragon_dao import DAO
 
 def instalar():
     try:
@@ -22,7 +23,10 @@ def instalar():
         voa BOOLEAN)
         """)
         
-        connection.commit()
+        connection.commit() 
+
+        dao_dragon = DAO(connection)
+        dao_dragon.create("aaa", 2000, False, "Gelo")
         print("Tabela criada com sucesso.")
         
     except sqlite3.Error as erro:
