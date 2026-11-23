@@ -1,8 +1,5 @@
 import sqlite3
 from database.connection import get_db_connection
-from database.dragon_dao import DAO
-from services.dragon_service import Service
-from entities.dragon import Dragon
 
 def instalar():
     try:
@@ -25,14 +22,7 @@ def instalar():
         voa BOOLEAN)
         """)
         
-        connection.commit() 
-
-        dao_dragon = DAO(connection)
-        dragon_s = Service(dao_dragon)
-        dragon = Dragon("aaa", 2000)
-        dragon_s.create(dragon)
-        dragon_s.list()
-        print("Tabela criada com sucesso.")
+        connection.commit()
         
     except sqlite3.Error as erro:
         print("Erro ao criar tabela.")
