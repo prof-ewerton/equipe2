@@ -16,6 +16,7 @@ def instalar():
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS dragons(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        tipo TEXT,
         lore TEXT,
         idade INTEGER NOT NULL DEFAULT 0,
         voa BOOLEAN)
