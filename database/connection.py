@@ -1,5 +1,7 @@
+import os
 import sqlite3
 
 def get_db_connection():
-    connection = sqlite3.connect('')
-    return connection.row_factory = sqlite3.Row
+    pasta = os.path.dirname(os.path.abspath(__file__))
+    caminho = os.path.join(pasta, "base_dados.db")
+    return sqlite3.connect(caminho)
