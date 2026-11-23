@@ -70,7 +70,7 @@ class Ui:
                     try:
                         i = int(input("\nIdade do dragão: ").strip())
                     except:
-                        print("\nDigite um número.")
+                        print("\nDigite um número, e que seja maior que zero.")
                         continue
                         
                     if i < 0:

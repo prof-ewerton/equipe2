@@ -32,4 +32,4 @@ Membros do grupo:
 ### João Barreto -> Dragão ###
 Requisitos completos para Dragão:
 1. ✅
-2. ❎
+2. ✅
