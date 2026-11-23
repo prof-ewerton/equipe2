@@ -14,6 +14,14 @@ def install():
                 classe text
             )
         """)
+        
+        insert into cavaleiro(nome, nivel, possuiDragao, classe) values(
+            "thomas", 1, True, "defesa",
+            "miguel", 3, True, "ataque",
+            "joao", 1, False, "guarda",
+            "jose", 2, False, "defesa",
+            "flavio", 2, True, "ataque",
+            )
         connection.commit()
     finally:
         connection.close()
