@@ -1,7 +1,7 @@
 class Dragon:
-    def __init__(self, lore: str = "", idade: int = 0):
+    def __init__(self, lore: str = "", idade: int = 0, voa: bool = False, tipo: str = ""):
         self.lore = lore
         self.idade = idade
-        self.voa = None
-        self.tipo = None
+        self.voa = voa
+        self.tipo = tipo
         self.id = None
